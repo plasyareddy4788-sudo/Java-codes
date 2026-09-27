@@ -1,0 +1,214 @@
+in strings it is stored with null character\0 
+it is invicible in the output screen but it is present
+
+public class Main
+{
+	public static void main(String[] args) {
+		String a="abc";
+		String b="def";
+		a=a+b;
+		System.out.println(a);
+	}
+}         abcdef
+
+                         ////////////
+public class Main
+{
+	public static void main(String[] args) {
+		String a="abc";
+		String b="def";
+		a.concat("def");
+		System.out.println(a);
+	}
+}    abc
+
+               //////////
+public class Main
+{
+	public static void main(String[] args) {
+		String a="abc";
+		String b=a.concat("def");
+		System.out.println(b);
+	}
+}             abcdef
+
+
+       ///String converted into character array
+public class Main 
+{
+	public static void main(String[] args) {
+		String a="abc";
+		char[] s=a.toCharArray();
+		for(int i=0;i<s.length;i++)
+		{
+		    System.out.println(s[i]);
+		}
+} }                   abc
+
+
+               ///////////
+public class Main
+{
+	public static void main(String[] args) {
+		String a="abcdef";
+		char[] s=a.toCharArray();
+		System.out.println("even");
+		for(int i=0;i<s.length;i+=2)
+		{
+		    System.out.print(s[i]);
+		}
+		System.out.println("odd");
+		for(int i=1;i<s.length;i+=2)
+		{
+		    System.out.print(s[i]);
+		}
+	}
+
+}                    
+output
+even
+ace
+odd
+bdf
+
+ ////////////////////////// count of vowels
+public class Main {
+    public static void main(String[] args) {
+        String a = "abcDEf";
+        a=a.toLowerCase();
+        int c = 0;
+        char[] s = a.toCharArray();
+        for (int i = 0; i < s.length; i++) {
+            if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u') {
+                c++;
+            }
+        }
+        System.out.println(c);
+    }
+}                       2
+
+////////  spaces in string
+public class Main {
+    public static void main(String[] args) {
+        String a = "My Str ing";
+        int c = 0;
+        char[] s = a.toCharArray();
+        for (int i = 0; i < s.length; i++) {
+            if (s[i] == ' ') {
+                c++;
+            }
+        }
+        System.out.println(c);
+    }
+}                  2
+
+
+//////////////////// count words
+public class Main {
+    public static void main(String[] args) {
+        String a = "My String is a big para";
+        int c = 0;
+        char[] s = a.toCharArray();
+        for (int i = 0; i < s.length; i++) {
+            if (s[i] == ' ') {
+                c++;
+            }
+        }
+        System.out.println(c+1);
+    }
+}        6
+
+
+////////// replace spaces with _
+public class Main {
+    public static void main(String[] args) {
+        String a = "My String is a big para";
+        char[] s = a.toCharArray();
+        
+        for (int i = 0; i < s.length; i++) {
+            if (s[i] == ' ') {
+                System.out.print("_");
+            } else {
+                System.out.print(s[i]);
+            }
+        }
+    }
+}          My_String_is_a_big_para
+    
+    //////////////// ascii values are added
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int s=(int)'a'+(int)'b';
+        System.out.println(s); 
+    }
+}     195
+      
+
+
+////////////////// conversion from upper to lower using ascii
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        String a = "AaBbCc";
+        char[] s = a.toCharArray();
+        int i=0;
+        for ( i=0; i < s.length; i++)
+        {
+            if(s[i]>=65 && s[i]<92)
+            {
+                s[i]=(char)(s[i]+32);
+            }
+        }
+        for ( i=0; i < s.length; i++)
+        {
+            System.out.print(s[i]);
+        }
+    }
+}            aabbcc
+
+        another method
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        String a = "AdBiCp";
+        char[] s = a.toCharArray();
+        for (int  i=0; i < s.length; i++)
+        {
+            if(Character.isUpperCase(s[i]))
+            {
+                s[i]=Character.toLowerCase(s[i]);
+            }
+        }
+        for ( int i=0; i < s.length; i++)
+        {
+            System.out.print(s[i]);
+        }
+        
+    }
+}      adbicp
+
+
+/////////////// first letter in each word is capital
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+        String a = "hd ji pp";
+        char[] s = a.toCharArray();
+        s[0] = Character.toUpperCase(s[0]);
+        for(int i=0;i<s.length;i++)
+        {
+            if(s[i]==' ')
+            {
+                s[i+1]=Character.toUpperCase(s[i+1]);
+            }
+        }
+        System.out.print(s);
+        
+    }
+}     Hd Ji Pp
+
+
+/////////////// 
+ 
+                
